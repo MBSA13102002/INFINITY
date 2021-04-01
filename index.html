@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="secure.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <!-- <img src="./rocket.png" alt="rocket" class="rocket"> -->
+        <div class="text">
+            <h1>INFINITY</h1>
+            <p>DUO CODERZ</p>
+        </div>
+       
+      <div id="infinity">
+        <!-- <form class="form" onsubmit="match()" > -->
+            <div class="animated-input">
+                <input type="text" placeholder="Username" id="username">
+                <input type="password" placeholder="Password" id="password">
+            </div>
+            <div class="check">
+                <!-- <div>
+                    <input type="checkbox" id="check">
+                    <label for="check" class="disc"></label>
+                    <label for="check" class="remember">Remember</label>
+                </div> -->
+                <p class="forget"><a href="#">Forget Password ?</a></p>
+            </div>          
+            <input id="btns" class="btn" type="submit" onclick="match()" value="LOGIN">
+        <!-- </form> -->
+    </div>
+
+        <p class="account"><a href="#"><b>ONLY ADMINS OF DUO CODERZ HAVE ACCESS TO THE PORTAL!!</b></a></p>
+    </div>
+<script>
+var input =document.getElementById("password")
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("btns").click();
+    }
+});
+</script>
+<audio src="denied.mp3"  style="display:none" id="denied">
+</audio> 
+<audio src="granted.mp3"  style="display:none" id="granted">
+</audio> 
+</body>
+
+</html>
